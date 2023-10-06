@@ -6,7 +6,7 @@ import fotoprofil from './fotoprofil.jpg'
 import profil2 from './profil2.jpg'
 import profil3 from './profil3.jpg'
 import profil4 from './profil4.jpg'
-
+import ig from './ig.png'
 
 
 export {
@@ -18,4 +18,5 @@ export {
     profil2,
     profil3,
     profil4,
+    ig,
 }

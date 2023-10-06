@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Image,StyleSheet, TouchableOpacity} from 'react-native';
+import { View,Image,StyleSheet} from 'react-native';
 import {
-  fotoprofil
+  fotoprofil, ig
 } from './assets'
-import { NavigationContainer, TabActions } from '@react-navigation/native';
+import { NavigationContainer, } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {MaterialCommunityIcons, Ionicons} from 'react-native-vector-icons';
+import {MaterialCommunityIcons, } from 'react-native-vector-icons';
 import {
   HomeScreen,
   LoginScreen,
@@ -66,12 +66,23 @@ const MainScreen = () => {
   )
 }
 
-function App({navigation}) {
+export default function App() {
+function SplashScreen({navigation}){
+  setTimeout(()=>{
+    navigation.replace('Login')
+  },5000)
 
+return(
+  <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+    <Image source={ig} style={{ width: 100, height: 100 }} />
+  </View>
+);
+}
   return (
     
     <NavigationContainer >
-      <Stack.Navigator initialRouteName='Login'>
+      <Stack.Navigator>
+      <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Main" component={MainScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={LoginScreen}options={{ headerShown: false }} />
         <Stack.Screen name="Message" component={MessageScreen} />
@@ -92,4 +103,3 @@ circle: {
   borderColor:'gray'
 },
 })
-export default App;
