@@ -1,8 +1,6 @@
 import { View, Text,Image,TouchableOpacity,StyleSheet,SafeAreaView,ScrollView } from 'react-native';
 import {MaterialCommunityIcons, Ionicons} from 'react-native-vector-icons';
-import {
-  PrimaryButton
-} from '../../components'
+
 import {
 fotoprofil,
 profil4,
@@ -26,7 +24,7 @@ function HomeScreen({navigation}) {
             <MaterialCommunityIcons name="heart-outline" size={24} color="black" />
           </TouchableOpacity>
           <TouchableOpacity
-            style={{ marginRight: 16 }}
+            style={{ marginEnd:5 }}
             onPress={() => navigation.navigate('Message')}
           >
             {/* Add your second icon here */}
@@ -98,31 +96,79 @@ function HomeScreen({navigation}) {
         </View>
       </ScrollView>
       
-      <View style={style.container} >
-        <View style={style.Beranda}>
-        <Image  source={fotoprofil} style={style.gambar} />
+      <View style={{margin:0,marginTop:10}} >
+        <View style={style.Beranda1}>
+        <Image source={fotoprofil} style={style.circularImage1} />
+        <Text style={{ fontSize: 16, marginRight: 8,fontWeight:500,marginLeft:8 ,flex:1}}>rafidfajar</Text>
+          
+          <MaterialCommunityIcons name="dots-vertical" size={25} color="black" style={{justifyContent: 'flex-end',}}/>
         </View>
         <View style={style.Beranda}>
-      <Image  source={fotoprofil} style={style.gambar} />
-        </View>
-        <View style={style.Beranda}>
-        <Image  source={fotoprofil} style={style.gambar} />
-        </View>
-        <View style={style.Beranda}>
-        <Image  source={fotoprofil} style={style.gambar} />
-        </View>
-        <View style={style.Beranda}>
-        <Image  source={fotoprofil} style={style.gambar} />
-        </View>
-        <View style={style.row}>
-      
-        </View>
-        <View style={style.row}>
        
+        <Image  source={fotoprofil} style={style.gambar} />
         </View>
-        <View style={style.row}>
-      
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:5}]}>
+        <MaterialCommunityIcons name="heart" size={28} color="red" />
+        <MaterialCommunityIcons name="bookmark-outline" size={30} color="black" style={{marginLeft:310}}/>
         </View>
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:15}]}>
+      <Text style={{fontWeight:'bold'}}>1.000</Text>
+      <Text style={{fontWeight:'bold',marginLeft:5}}>Like</Text>
+        </View>
+        <View style={style.Beranda1}>
+        <Image source={profil2} style={style.circularImage1} />
+        <Text style={{ fontSize: 16, marginRight: 8,fontWeight:500,marginLeft:8 ,flex:1 }}>alfredosmrt</Text>
+          
+          <MaterialCommunityIcons name="dots-vertical" size={25} color="black" style={{justifyContent: 'flex-end',}}/>
+        </View>
+        
+        <View style={style.Beranda}>
+      <Image  source={profil2} style={style.gambar} />
+        </View>
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:5}]}>
+        <MaterialCommunityIcons name="heart-outline" size={28} color="black" />
+        <MaterialCommunityIcons name="bookmark-outline" size={30} color="black" style={{marginLeft:310}}/>
+        </View>
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:15}]}>
+      <Text style={{fontWeight:'bold'}}>1.000</Text>
+      <Text style={{fontWeight:'bold',marginLeft:5}}>Like</Text>
+        </View>
+        <View style={style.Beranda1}>
+        <Image source={profil3} style={style.circularImage1} />
+        <Text style={{ fontSize: 16, marginRight: 8,fontWeight:500,marginLeft:8,flex:1 }}>audyselfr</Text>
+          
+          <MaterialCommunityIcons name="dots-vertical" size={25} color="black" style={{justifyContent: 'flex-end',}}/>
+        </View>
+        <View style={style.Beranda}>
+        <Image  source={profil3} style={style.gambar} />
+        </View>
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:5}]}>
+        <MaterialCommunityIcons name="heart-outline" size={28} color="black" />
+        <MaterialCommunityIcons name="bookmark-outline" size={30} color="black" style={{marginLeft:310}}/>
+        </View>
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:15}]}>
+      <Text style={{fontWeight:'bold'}}>1.000</Text>
+      <Text style={{fontWeight:'bold',marginLeft:5}}>Like</Text>
+        </View>
+        <View style={style.Beranda1}>
+        <Image source={profil4} style={style.circularImage1} />
+        <Text style={{ fontSize: 16, marginRight: 8,fontWeight:500,marginLeft:8,flex:1 }}>rahutstmpl</Text>
+          
+          <MaterialCommunityIcons name="dots-vertical" size={25} color="black" style={{justifyContent: 'flex-end',}}/>
+        </View>
+        <View style={style.Beranda}>
+        <Image  source={profil4} style={style.gambar} />
+        </View>
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:5}]}>
+        <MaterialCommunityIcons name="heart-outline" size={28} color="black" />
+        <MaterialCommunityIcons name="bookmark-outline" size={30} color="black" style={{marginLeft:310}}/>
+        </View>
+        <View style={[style.Beranda1,{marginLeft:10,marginBottom:15}]}>
+      <Text style={{fontWeight:'bold'}}>1.000</Text>
+      <Text style={{fontWeight:'bold',marginLeft:5}}>Like</Text>
+        </View>
+    
+       
         
 
       </View>
@@ -136,7 +182,7 @@ function HomeScreen({navigation}) {
       backgroundColor: 'white', // Set the background color for the entire screen
     },
       container:{
-          margin: 15,
+          margin: 5,
       },
       row: {
       
@@ -169,16 +215,33 @@ function HomeScreen({navigation}) {
         // Border color
      
       },
+      circularImage1: {
+        width: 50, // Set the width of the image
+        height: 50, // Set the height of the image
+        borderRadius: 50, // Half of the width and height to create a circular shape
+        borderWidth: 3, // Border width
+        borderColor: 'white',
+        // Border color
+     
+      },
       Beranda:{
         flex:1,
-        
+        flexDirection:'row',
         alignItems:'center',
         marginBottom:10,
+      },
+      Beranda1:{
+flex:1,
+flexDirection:'row',
+alignItems:'center',
+marginBottom:5,
+marginLeft:5
+
       },
       gambar:{
       flex:1,
 width:'100%',
-height:300
+height:380
       },
       iconContainer: {
         ...StyleSheet.absoluteFillObject,

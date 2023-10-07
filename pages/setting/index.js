@@ -110,7 +110,13 @@ function SettingScreen({ navigation }) {
             <TouchableOpacity>
             <Text style={[style.link,{marginTop:10}]}>Sign up for meta verified</Text>
             </TouchableOpacity>
-
+            <TouchableOpacity  onPress={() => {
+                // Custom logic when the back button is pressed
+                // For example, you can navigate to a different screen
+                navigation.navigate('Login');
+              }}>
+            <Text style={{marginTop:20,color:'red',fontWeight:500,fontSize:18}}>Logout</Text>
+            </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

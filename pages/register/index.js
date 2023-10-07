@@ -12,11 +12,25 @@ import {
   Image,
   TextInput,
   SafeAreaView,
-  ScrollView
+  ScrollView,
+  Alert
 } from 'react-native';
 
 
 function RegisterScreen({navigation}) {
+  const showAlert = () => {
+    Alert.alert(
+      'Registrasi Berhasil',
+      'Data Berhasil Disimpan.',
+      [
+        {
+          text: 'OK',
+          onPress: () => navigation.navigate('Login'),
+        },
+      ],
+      { cancelable: false }
+    );
+  };
 return (
   <SafeAreaView>
     <ScrollView>
@@ -54,7 +68,7 @@ return (
           <PrimaryButton 
           style={style.loginFacebook}
           title="Sign up"
-          onPress={() => navigation.navigate('Login')}
+          onPress={showAlert}
           />
         <Text style={[style.bodyText,{marginTop:20}]}>
           People who use or service may have uploaded your contact 
